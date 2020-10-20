@@ -12,10 +12,13 @@ public class NetClientPost {
 	public static void main(String[] args) {
 
 	  try {
+
     String s=null;
     StringBuffer ddd= new StringBuffer();
 
 		final URL url = new URL("http://localhost:8080/RESTfulExample/json/product/post");
+
+
 		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 		conn.setDoOutput(true);
 		conn.setRequestMethod("POST");
