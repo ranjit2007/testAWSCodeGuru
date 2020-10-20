@@ -17,6 +17,16 @@ public class NetClientPost {
     StringBuffer ddd= new StringBuffer();
 
 		final URL url = new URL("http://localhost:8080/RESTfulExample/json/product/post");
+		
+		String ss="dd";
+		String ss="dd";
+		String ss="dd";
+		String ss="dd";
+		String ss="dd";
+		for (int i=0; i<arr.length; i++) 
+{ 
+    
+}
 
 
 		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
