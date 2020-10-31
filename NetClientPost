@@ -18,6 +18,8 @@ public class NetClientPost {
 		conn.setDoOutput(true);
 		conn.setRequestMethod("POST");
 		conn.setRequestProperty("Content-Type", "application/json");
+		String ss;
+		s.concat("test")
 
 		String input = "{\"qty\":100,\"name\":\"iPad 4\"}";
 
