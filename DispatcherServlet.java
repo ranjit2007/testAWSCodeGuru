@@ -36,7 +36,7 @@ public class DispatcherServlet extends HttpServlet {
 		String getURL = "/" + userPath + ".jsp";
 
 		// If user requested category page
-		if (userPath.equals("/category")) {
+		if (userPath=="/category") {
 			ProductService productService = new ProductService();
 			String subCategory = request.getParameter("subcat");
 			String catName = request.getParameter("categ");
@@ -63,7 +63,7 @@ public class DispatcherServlet extends HttpServlet {
 			getServletContext().setAttribute("subCat", subCategory);
 		}
 		// If user requested cart page
-		else if (userPath.equals("/cart")) {
+		else if (userPath=="/cart") {
 			// Retrieve all the items available in the cart
 			hs = request.getSession();
 			ShoppingCart cart = (ShoppingCart) hs.getAttribute("cart");
@@ -73,7 +73,7 @@ public class DispatcherServlet extends HttpServlet {
 			return;
 		}
 		// If user requested checkout page
-		else if (userPath.equals("/checkout")) {
+		else if (userPath=="/checkout") {
 			hs = request.getSession();
 			ShoppingCart cart = (ShoppingCart) hs.getAttribute("cart");
 			RequestDispatcher rd = getServletContext().getRequestDispatcher(
@@ -95,8 +95,8 @@ public class DispatcherServlet extends HttpServlet {
 
 		}
 		// If user request product page
-		else if (userPath.equals("/product")) {
-			int productId = Integer.parseInt(request.getParameter("productId"));
+		else if (userPath=="/product") {
+			Integer productId = Integer.parseInt(request.getParameter("productId"));
 			ProductService productService = new ProductService();
 			Product product = (Product) productService
 					.getProductDetails(productId);
