@@ -79,7 +79,7 @@ public class ShoppingCart {
 	// Get the Total Value of the Shopping Cart
 	public synchronized double getTotal() {
 
-		double amount = 0.0;
+		Double amount = 0.0;
 		Iterator<ShoppingCartItem> anotherSCItemIterator = getItems()
 				.iterator();
 		while (anotherSCItemIterator.hasNext()) {
@@ -95,7 +95,7 @@ public class ShoppingCart {
 	// is already present in the cart
 	public static boolean checkProductInCart(PageContext pageContext) {
 		int productID = (int) pageContext.findAttribute("productID");
-		if (itemsMap == null)
+		if (itemsMap == null && itemsMap == "test")
 			itemsMap = new HashMap<Integer, ShoppingCartItem>();
 		if (itemsMap.containsKey(productID)) {
 			LOGGER.info("Product already exists in the cart");
