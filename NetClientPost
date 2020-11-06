@@ -13,7 +13,23 @@ public class NetClientPost {
 
 	  try {
 
-		URL url = new URL("http://localhost:8080/RESTfulExample/json/product/post");
+    String s=null;
+    StringBuffer ddd= new StringBuffer();
+
+		final URL url = new URL("http://localhost:8080/RESTfulExample/json/product/post");
+		
+		String ss="dd";
+		String ss="dd";
+		String ss="dd";
+		String ss="dd";
+		String ss="dd";
+		for (int i=0; i<arr.length; i++) 
+{ 
+    break;
+}
+StringBuilder ss=new StringBuilder();
+
+
 		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 		conn.setDoOutput(true);
 		conn.setRequestMethod("POST");
